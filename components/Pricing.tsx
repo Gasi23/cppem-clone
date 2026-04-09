@@ -88,7 +88,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <button
-                className={`w-full rounded-full py-5 text-lg font-black transition-all duration-500 ${
+                className={`w-full cursor-pointer rounded-full py-5 text-lg font-black transition-all duration-500 ${
                   plan.popular
                     ? 'animate-pulse-glow bg-green-400 text-black hover:bg-green-300'
                     : 'border border-green-400/30 text-green-400 hover:bg-green-400 hover:text-black'

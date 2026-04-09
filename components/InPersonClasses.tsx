@@ -13,7 +13,10 @@ export default function InPersonClasses() {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-black py-24">
+    <section
+      id="presencial"
+      className="relative overflow-hidden bg-black py-24"
+    >
       {/* Faixa Superior */}
       <div className="absolute top-0 w-full border-y border-green-400/20 bg-green-400/5 py-4 backdrop-blur-sm">
         <div className="flex items-center justify-center gap-3 text-center text-xs font-bold tracking-[0.4em] text-green-300 uppercase sm:text-sm">
@@ -77,7 +80,7 @@ export default function InPersonClasses() {
               ))}
             </div>
 
-            <button className="mt-12 w-full transform rounded-xl bg-green-400 px-10 py-5 text-lg font-black text-black shadow-lg transition-all hover:scale-105 hover:bg-green-300 sm:w-auto">
+            <button className="mt-12 w-full transform cursor-pointer rounded-xl bg-green-400 px-10 py-5 text-lg font-black text-black shadow-lg transition-all hover:scale-105 hover:bg-green-300 sm:w-auto">
               Quero conhecer as turmas presenciais
             </button>
           </div>

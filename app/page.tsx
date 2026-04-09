@@ -52,6 +52,7 @@ export default function Home() {
       </FadeInSection>
       <Footer />
       <FixedCTA />
+      <WhatsAppButton />
     </main>
   )
 }

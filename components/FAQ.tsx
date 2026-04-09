@@ -55,6 +55,7 @@ export default function FAQ() {
 
   return (
     <section
+      id="faq"
       className="relative bg-black px-6 py-20 text-white sm:px-8 lg:px-12"
       style={{
         background: 'linear-gradient(135deg, #000000 0%, #0A1A0A 100%)',

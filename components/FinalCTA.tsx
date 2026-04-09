@@ -1,3 +1,5 @@
+'use client'
+
 // components/FinalCTA.tsx
 import { FaShieldAlt, FaHeadset, FaBolt } from 'react-icons/fa'
 
@@ -38,7 +40,14 @@ export default function FinalCTA() {
           </div>
         </div>
 
-        <button className="group relative transform rounded-full bg-green-400 px-16 py-8 text-2xl font-black text-black shadow-[0_0_50px_rgba(0,255,0,0.2)] transition-all duration-500 hover:scale-110 hover:bg-green-300">
+        <button
+          onClick={() => {
+            document.getElementById('pricing')?.scrollIntoView({
+              behavior: 'smooth',
+            })
+          }}
+          className="group relative transform cursor-pointer rounded-full bg-green-400 px-16 py-8 text-2xl font-black text-black shadow-[0_0_50px_rgba(0,255,0,0.2)] transition-all duration-500 hover:scale-110 hover:bg-green-300"
+        >
           QUERO SER APROVADO AGORA
         </button>
 

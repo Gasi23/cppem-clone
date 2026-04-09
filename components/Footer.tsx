@@ -10,7 +10,10 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-green-400/10 bg-black text-white">
+    <footer
+      id="footer"
+      className="relative border-t border-green-400/10 bg-black text-white"
+    >
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-green-400/20 to-transparent blur-3xl" />
       <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-16 sm:px-8 lg:flex-row lg:items-start lg:justify-between lg:px-12">
         <div className="max-w-xl space-y-4">

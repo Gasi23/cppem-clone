@@ -1,8 +1,17 @@
+'use client'
+
 // components/Hero.tsx
 import Image from 'next/image'
 import TrustLogos from './TrustLogos'
 
 export default function Hero() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       {/* Navbar Fixa */}
@@ -16,25 +25,43 @@ export default function Hero() {
             </div>
             <div className="hidden md:block">
               <div className="flex space-x-8 text-sm tracking-[0.2em] text-green-400 uppercase">
-                <a href="#" className="transition hover:text-white">
+                <button
+                  onClick={() => scrollToSection('hero')}
+                  className="cursor-pointer transition hover:text-white"
+                >
                   Home
-                </a>
-                <a href="#" className="transition hover:text-white">
-                  Sobre
-                </a>
-                <a href="#" className="transition hover:text-white">
-                  Cursos
-                </a>
-                <a href="#" className="transition hover:text-white">
+                </button>
+                <button
+                  onClick={() => scrollToSection('beneficios')}
+                  className="cursor-pointer transition hover:text-white"
+                >
+                  Benefícios
+                </button>
+                <button
+                  onClick={() => scrollToSection('presencial')}
+                  className="cursor-pointer transition hover:text-white"
+                >
+                  Presencial
+                </button>
+                <button
+                  onClick={() => scrollToSection('footer')}
+                  className="cursor-pointer transition hover:text-white"
+                >
                   Contato
-                </a>
+                </button>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="rounded-full bg-green-400 px-6 py-2 text-sm font-black text-black transition-all hover:scale-105 hover:bg-green-300">
+              <button
+                onClick={() => scrollToSection('pricing')}
+                className="cursor-pointer rounded-full bg-green-400 px-6 py-2 text-sm font-black text-black transition-all hover:scale-105 hover:bg-green-300"
+              >
                 Loja
               </button>
-              <button className="rounded-full border border-green-400/30 px-6 py-2 text-sm font-bold text-green-400 transition-all hover:bg-green-400 hover:text-black">
+              <button
+                onClick={() => scrollToSection('pricing')}
+                className="cursor-pointer rounded-full border border-green-400/30 px-6 py-2 text-sm font-bold text-green-400 transition-all hover:bg-green-400 hover:text-black"
+              >
                 Login
               </button>
             </div>
@@ -43,7 +70,10 @@ export default function Hero() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-[#020202] pt-16 text-white">
+      <section
+        id="hero"
+        className="relative min-h-screen overflow-hidden bg-[#020202] pt-16 text-white"
+      >
         {/* Grid animado de fundo */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,255,0,0.12)_0%,_transparent_40%)] opacity-20"></div>
         <div className="animate-grid absolute inset-0 bg-[linear-gradient(rgba(0,255,0,0.08)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(0,255,0,0.08)_1px,_transparent_1px)] bg-[size:70px_70px]"></div>
@@ -132,10 +162,16 @@ export default function Hero() {
                 aulas reais, simulados, mentorias e relatórios de desempenho.
               </p>
               <div className="animate-fade-in-up animation-delay-1100 mt-12 flex flex-col gap-5 sm:flex-row sm:justify-center lg:justify-start">
-                <button className="group animate-pulse-glow relative transform overflow-hidden rounded-xl bg-green-400 px-10 py-5 text-lg font-black text-black shadow-lg transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:bg-green-300 active:scale-95">
+                <button
+                  onClick={() => scrollToSection('pricing')}
+                  className="group animate-pulse-glow relative transform cursor-pointer overflow-hidden rounded-xl bg-green-400 px-10 py-5 text-lg font-black text-black shadow-lg transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:bg-green-300 active:scale-95"
+                >
                   <span className="relative z-10">QUERO MINHA FARDA</span>
                 </button>
-                <button className="rounded-xl border border-white/10 bg-white/5 px-10 py-5 text-lg font-bold text-white backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/10">
+                <button
+                  onClick={() => scrollToSection('depoimentos')}
+                  className="cursor-pointer rounded-xl border border-white/10 bg-white/5 px-10 py-5 text-lg font-bold text-white backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/10"
+                >
                   Ver Demo
                 </button>
               </div>

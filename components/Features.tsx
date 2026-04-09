@@ -24,7 +24,10 @@ export default function Features() {
   ]
 
   return (
-    <section className="bg-[#020202] px-6 py-24 text-green-400 sm:px-8 lg:px-12">
+    <section
+      id="beneficios"
+      className="bg-[#020202] px-6 py-24 text-green-400 sm:px-8 lg:px-12"
+    >
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-16 text-center text-5xl font-black tracking-tighter text-white uppercase sm:text-7xl">
           Nossas Features
