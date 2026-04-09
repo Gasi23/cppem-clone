@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -14,34 +14,116 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #050505;
     --foreground: #ededed;
   }
 }
 
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--background);
+  background: #000000;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3 {
-  color: #FFD700;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
+/* Grid Futurista Refinado */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(74, 222, 128, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(74, 222, 128, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black, transparent 90%);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
-@media (max-width: 768px) {
-  body { font-size: 14px; }
+/* Pulsing neon glow animation */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(74, 222, 128, 0.15),
+      0 0 40px rgba(74, 222, 128, 0.05);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(74, 222, 128, 0.25),
+      0 0 60px rgba(74, 222, 128, 0.1);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes move-grid {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      70px 70px,
+      -70px -70px;
+  }
+}
+
+.animate-grid {
+  animation: move-grid 18s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-12px) translateX(8px);
+    opacity: 1;
+  }
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes float-particle {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+}
+
+.particle {
+  position: absolute;
+  background: #4ade80;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: float-particle 10s ease-in-out infinite;
 }
